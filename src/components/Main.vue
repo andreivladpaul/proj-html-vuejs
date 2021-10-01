@@ -299,11 +299,10 @@ main {
     .cards-color {
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         .card-color {
-            width: 400px;
-            padding: 30px 0;
-            margin-left: 100px;
+            width: 350px;
+            height: 100px;
             display: flex;
             align-items: center;
             background-repeat: no-repeat;
