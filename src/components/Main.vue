@@ -1,10 +1,10 @@
 <template>
-  <main class="flex-jc">
+  <main >
 
     <div class="container">
           <h2 id="intro">Since 200, weve been partnering with education leaders to <b class="bold">increase equity and achievement</b> for all students.</h2>
 
-        <!-------- SERVICES OFFERED -------->
+        <!----------------------------------- SERVICES OFFERED -------------------------->
         <div class="cards mb-30">
             <div class="card">
                 <img  src="../assets/svg/svg-0.svg" alt="">
@@ -25,7 +25,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit</p>
             </div>
         </div>
-        <!-------- OBJECTIVES OBTAINED -------->
+        <!----------------------------------- OBJECTIVES OBTAINED ----------------------------------->
         <div class="cards-color mb-30">
           <div class="card-color" id="first">
               <span>6000</span>
@@ -48,7 +48,7 @@
           
         </div>
 
-        <!-------- RECENT COURSES -------->
+        <!----------------------------------------- RECENT COURSES ----------------------------------->
         <h3>Recent Courses</h3>
         <p>Wheter you're considering a foundation course ora an undergraduated degree master's <br> or a PhD, academics is a place where students thrive.</p>
 
@@ -62,8 +62,8 @@
 
                 <div class="card course">
                     <h3>UI Animation using Sketch 3, Principle App and Flinto</h3>
-                    <p>This online photography course will teach you how to take amazing images and even sell... 
-                    </p>
+                    <p>This online photography course will teach you how to take amazing images and even sell...</p>
+                
                     <p class="course-creator">Course by: University</p>
                 </div>
             </div>
@@ -88,12 +88,117 @@
                 
 
                 <div class="card course">
-                    <h3>Your Complete Guido to Photography</h3>
+                    <h3>Your Complete Guide to Photography</h3>
                     <p>This online photography course will teach you how to take amazing images and even sell...</p>
                     <p  class="course-creator">Course by: University</p>
                 </div>
             </div>
       </div>
+      <!----------------------------------- CAPTION ----------------------------->
+      <div class=" caption">
+          <h2>"Academic was committed to my success from the moment I attended an Open House. With the support of caring <a href=""><b>advisors, professors, and staff</b></a> i was able to thrive in courses, gain recognition through scholarship, and finish <b>with confidence in my <a href="">@academic</a> abilities</b>"</h2>
+
+      </div>
+
+      <!----------------------------- UPCOMING EVENTS -------------------------------->
+      <div class="events">
+            <div class="video">
+                <img src="../assets/img/play-button.png" alt="">
+
+                <div class="upcoming">
+                    <h3>Upcoming Events</h3>
+
+                    <div class="events-description">
+                        <div class="description">
+                            <p>Princeton offers admission information sessions and student-led tours to campus visitors</p>
+                            <p class="more"><a href="#">Learn more <i class="fas fa-chevron-right"></i> </a></p>
+
+                        </div>
+
+                        <div class="description">
+                            <p>Admission information sessions and student-led tours to campus visitors</p>
+                            <p class="more"><a href="#">Learn more <i class="fas fa-chevron-right"></i> </a></p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+      </div>
+
+
+        <!---------------------------------- BLOGS------------------------------------>
+      <h3>Latest From Our Blog</h3>
+        <p>Wheter you're considering a foundation course ora an undergraduated degree master's <br> or a PhD, academics is a place where students thrive.</p>
+
+        
+        <div class="cards mb-30">
+            <!------- BLOG 1------>
+            <div class="course-card">
+                <div class="course-img">
+                    <img  src="../assets/img/news-3-2.jpg" alt="">
+                </div>
+                
+
+                <div class="card course">
+                    <div class="icons">
+                        <p><i class="far fa-user"></i> Admin</p>
+                        <p><i class="far fa-folder"></i> University</p>
+                    </div>
+                    <h3>Peer pressure changes how teens tackle inequality</h3>
+
+                    <div class="line mb-30"></div>
+                
+                    <p class="read-more"> <a href="">Read more <i class="fas fa-chevron-right"></i>  </a></p>
+                </div>
+            </div>
+            <!------- BLOG 2------>
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="../assets/img/news-3-2.jpg" alt=""> 
+                </div>
+                
+
+                <div class="card course">
+                    <div class="icons">
+                        <p><i class="far fa-user"></i> Admin</p>
+                        <p><i class="far fa-folder"></i> University</p>
+                    </div>
+                    <h3>Lweisham Live Mixtape Celebrates borough's</h3>
+                    <div class="line mb-30"></div>
+                    
+                    <p  class="read-more"> <a href="">Read more <i class="fas fa-chevron-right"></i> </a></p>
+                </div>
+            </div>
+            <!------- BLOG 3------>
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="../assets/img/news-3-2.jpg" alt="">
+                </div>
+                
+
+                <div class="card course">
+                    <div class="icons">
+                        <p><i class="far fa-user"></i> Admin</p>
+                        <p><i class="far fa-folder"></i> University</p>
+                    </div>
+                    <h3>Turner Prize winner's work to open Gold on Film festival</h3>
+                    <div class="line mb-30"></div>
+                    
+                    <p  class="read-more"> <a href="">Read more <i class="fas fa-chevron-right"></i> </a></p>
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="pictures">
+        <img src="../assets/img/news-3-2.jpg" alt="">
+        <img src="../assets/img/news-3-2.jpg" alt="">
+        <img src="../assets/img/news-3-2.jpg" alt="">
+        <img src="../assets/img/news-3-2.jpg" alt="">
+
     </div>
     
   </main>
@@ -112,6 +217,9 @@ export default {
 
 main {
     text-align: center;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
     
 }
 .container {
@@ -133,7 +241,7 @@ main {
     .cards {
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         .card, .course-card {
             max-width: 350px;
@@ -145,6 +253,9 @@ main {
 
             .card {
                 padding: 50px 30px;
+                h3 {
+                    font-size: 20px;
+                }
                 
 
                 img{
@@ -245,7 +356,130 @@ main {
         }
         
     }
+
+    .caption {
+        margin-top: 100px;
+        background-image: url('../assets/img/quote.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        
+
+        h2 {
+            font-weight: 500;
+            color: $text;
+            line-height: 50px;
+        }
+
+        a {
+            color: $main-c;
+            text-decoration:none ;
+            border-bottom: 2px solid $main-c;
+            padding-bottom: 4px;
+
+        }
+    }
+
+    .events {
+        width: 100%;
+        height: 800px;
+        margin-top: 100px;
+
+        
+        .video {
+            width: 650px;
+            height: 525px;
+            position: relative;
+            background-image: url('../assets/img/video-bg-3.jpg');
+
+            img {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .upcoming {
+            position: absolute;
+            top: 100px;
+            left:400px;
+            width: 650px;
+            height: 580px;
+            background-color: #fff;
+            box-shadow: 11px -2px 52px -23px rgba(0, 0, 0, 0.281);
+            -webkit-box-shadow: 11px -2px 52px -23px rgba(0, 0, 0, 0.342);
+            -moz-box-shadow: 11px -2px 52px -23px rgba(0, 0, 0, 0.425);
+
+            h3 {
+                display: inline-block;
+                color: #fff;
+                padding: 40px 60px;
+                background-color: $main-c;
+            }
+
+            .events-description {
+                padding: 50px 40px;
+
+                .description {
+                    text-align: start;
+                    color: $text;
+                    font-weight: 600;
+
+                    .more {
+                        margin-bottom: 30px;
+
+                    }
+
+                    p {
+                        margin-bottom: 20px;
+                    }
+
+                    a {
+                        color: $text;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 50px;
+        height: 2px;
+        background-color: $main-c;
+
+    }
+    .icons {
+        text-align: start;
+        p {
+            display: inline-block;
+            font-size: 16px ;
+        }
+        p:not(last-child) {
+            margin-right: 20px;
+        }
+
+    }
+
+    .read-more {
+            a {
+                color: $text;
+            }
+        }
         
 }
+
+.pictures {
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    img {
+        width: calc(100% / 4);
+        height: 100%;
+    }
+}
+
+
 
 </style>
