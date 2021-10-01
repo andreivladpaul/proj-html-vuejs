@@ -61,6 +61,9 @@
                 
 
                 <div class="card course">
+                    <div class="free">Free
+                        <div class="pink"></div>
+                    </div>
                     <h3>UI Animation using Sketch 3, Principle App and Flinto</h3>
                     <p>This online photography course will teach you how to take amazing images and even sell...</p>
                 
@@ -75,6 +78,9 @@
                 
 
                 <div class="card course">
+                    <div class="free">Free
+                        <div class="pink"></div>
+                    </div>
                     <h3>The Ultimate Drawing Course - Beginner to Advanced</h3>
                     <p>This online photography course will teach you how to take amazing images and even sell...</p>
                     <p  class="course-creator">Course by: University</p>
@@ -88,6 +94,9 @@
                 
 
                 <div class="card course">
+                    <div class="free">Free
+                        <div class="pink"></div>
+                    </div>
                     <h3>Your Complete Guide to Photography</h3>
                     <p>This online photography course will teach you how to take amazing images and even sell...</p>
                     <p  class="course-creator">Course by: University</p>
@@ -119,6 +128,16 @@
                             <p>Admission information sessions and student-led tours to campus visitors</p>
                             <p class="more"><a href="#">Learn more <i class="fas fa-chevron-right"></i> </a></p>
 
+                        </div>
+
+                        <div>
+                            <p>
+                                <a href="">
+                                    <i class="far fa-map"></i> 
+                                    Event Locations
+                                </a>
+                            </p>    
+                                
                         </div>
                     </div>
                 </div>
@@ -268,6 +287,20 @@ main {
                 align-items: flex-start;
                 box-shadow: none;
 
+                .free {
+                    position: relative;
+                    text-align: start;
+                    .pink {
+                        position: absolute;
+                        left: 1px;
+                        bottom: 5px;
+                        width: 50px;
+                        height: 5px;
+                        z-index: -1;
+                        background-color: rgba(255, 192, 203, 0.63);
+                    }
+                }
+
 
                 > .course-img {
                     width: 100%;
@@ -382,11 +415,13 @@ main {
         width: 100%;
         height: 800px;
         margin-top: 100px;
+        
 
         
         .video {
             width: 650px;
             height: 525px;
+            margin: 0 auto;
             position: relative;
             background-image: url('../assets/img/video-bg-3.jpg');
 
@@ -417,6 +452,9 @@ main {
                 padding: 40px 60px;
                 background-color: $main-c;
             }
+            a {
+                        color: $text;
+                    }
 
             .events-description {
                 padding: 50px 40px;
@@ -435,9 +473,7 @@ main {
                         margin-bottom: 20px;
                     }
 
-                    a {
-                        color: $text;
-                    }
+                   
                 }
             }
         }

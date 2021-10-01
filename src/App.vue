@@ -2,10 +2,12 @@
   <div id="app">
     <Header />
     <Main />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 
@@ -13,7 +15,8 @@ export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    Footer
   }
 }
 </script>
@@ -21,7 +24,5 @@ export default {
 <style lang="scss">
 @import '/styles/globals.scss';
 
-#app {
-  
-}
+
 </style>
