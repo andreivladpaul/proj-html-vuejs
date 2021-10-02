@@ -8,11 +8,8 @@
               </div>
               
               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Academics</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">News</a></li>
+                  <li v-for="(link,index) in links" :key="index"><a href="#">{{link.title}}</a></li>
+                  
                   
               </ul>
           </div>
@@ -34,7 +31,29 @@
 
 <script>
 export default {
-    name:'Header'
+    name:'Header',
+    data() {
+        return {
+            "links": [
+            {
+                'title': 'Home',
+            },
+            {
+               'title': 'About'
+            },
+            {
+               'title': 'Academics'
+            },
+            {
+               'title': 'Courses'
+            },
+            {
+               'title': 'News'
+            }
+        
+        ]
+        }
+    }
 }
 </script>
 

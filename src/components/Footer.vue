@@ -33,52 +33,12 @@
                         </li>
                     </ul>
 
-                    <!-- CONTACT US -->
-                    <ul>
-                        <li><h3>Support Us</h3>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Privacy
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Terms
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Cookie Policy
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Sitemap
-                        </li>
-                    </ul>
-
-                    <!-- CONTACT US -->
-                    <ul>
-                        <li><h3>Explore</h3>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Accomodation
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Arts Academics
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Central Services
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Conferences and Events
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Food andDrink
-                        </li>
-                    </ul>
-
-                    <!-- CONTACT US -->
-                    <ul>
-                        <li><h3>Visit</h3>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Admission
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Contact US
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> FAQs
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Request Information
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Privacy Notice
-                        </li>
-                    </ul>
                     
+                    <ul v-for="(link,index) in links" :key="index">
+                        <li><h3>{{link.title}}</h3></li>
+                        <li v-for="(collegamento,index) in link.link" :key="index"><i class="fas fa-chevron-right"></i> {{collegamento}} </li>
+                        
+                    </ul>
                 </div>
 
             </div>
@@ -91,10 +51,8 @@
                 </p>
 
                 <ul>
-                    <li><a href="">Privacy</a></li>
-                    <li><a href="">Terms</a></li>
-                    <li><a href="">Cookie Policy</a></li>
-                    <li><a href="">Sitemap</a></li>
+                    <li  v-for="(link,index) in linksBottom" :key="index"><a href="">{{link.title}}</a></li>
+                    
                     
                 </ul>
 
@@ -110,6 +68,46 @@
 
 export default {
   name: 'Footer',
+  data() {
+      return {
+          "links": [
+            {
+                'title': 'Contact Us',
+                'link': ['Privacy','Terms','Cookie Policy', 'Sitemap']
+            },
+            {
+               'title': 'Support Us',
+               'link': ['Privacy','Terms','Cookie Policy', 'Sitemap']
+            },
+            {
+               'title': 'Explore',
+               'link': ['Accomodation','Arts Academics','Central Services', 'Conferences and Events', 'Food and Drink']
+            },
+            {
+               'title': 'Visit',
+               'link': ['Admission','Contact Us','FAQs', 'Request Information', 'Privacy Notice']
+            }
+        
+        ],
+        
+        "linksBottom": [
+            {
+                'title': 'Privacy',
+            },
+            {
+               'title': 'Terms'
+            },
+            {
+               'title': 'Cookie Policy'
+            },
+            {
+               'title': 'Sitemap'
+            }
+        
+        ]
+        
+    }
+  }
   
 }
 </script>
@@ -127,6 +125,7 @@ export default {
                 justify-content: space-between;
                 align-items: center;
                 font-size: 16px;
+                
         }
 
         .footer-top {
@@ -162,7 +161,7 @@ export default {
                         button {
                             background-color: $main-c;
                             color: #fff;
-                            
+                            cursor: pointer;
                         }
                     }
 
@@ -178,6 +177,10 @@ export default {
                         
                         a {
                         color: $main-c;
+
+                            &:hover {
+                                color: #fff;
+                            }
                         }
                         #underline {
                             border-bottom: 1px solid #fff ;
@@ -209,19 +212,26 @@ export default {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+
+                 h3 {
+                color: #fff;
+                }
+
+                 ul {
+                     max-width: 200px;
+                     li {
+                         margin-bottom: 20px;
+                         cursor: pointer;
+                         
+                         &:hover {
+                                color: #fff;
+                            }
+                     }
+                 }
+                
             }
             
-            h3 {
-                color: #fff;
-            }
-
-            ul {
-                max-width: 200px;
-                li {
-                    margin-bottom: 20px;
-                    cursor: pointer;
-                }
-            }
+           
             
         }
 
@@ -247,6 +257,10 @@ export default {
                 li {
                     a {
                         color: $f-link-c;
+                        
+                        &:hover {
+                                color: #fff;
+                            }
                     }
                 }
 

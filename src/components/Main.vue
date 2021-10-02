@@ -333,11 +333,13 @@ main {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .card-color {
             width: 350px;
             height: 100px;
             display: flex;
             align-items: center;
+            justify-content: center;
             background-repeat: no-repeat;
             background-position: left;
             text-align: start;
@@ -421,7 +423,7 @@ main {
         .video {
             width: 650px;
             height: 525px;
-            margin: 0 auto;
+            margin: 0 100px;
             position: relative;
             background-image: url('../assets/img/video-bg-3.jpg');
 
